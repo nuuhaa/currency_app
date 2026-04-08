@@ -5,6 +5,11 @@ app_description = "A custom Frappe app for displaying currency exchange rates."
 app_email = "noha.mmohamedd@gmail.com"
 app_license = "MIT"
 
+scheduler_events = {
+    "hourly": [
+        "currency_app.currency_api.run_hourly_currency_updates"
+    ]
+}
 # Includes in <head>
 # ------------------
 
